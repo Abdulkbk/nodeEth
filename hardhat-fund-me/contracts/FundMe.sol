@@ -7,7 +7,7 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "./PriceConverter.sol";
 
 // 3.Interfaces, Libraries, Contracts
-error FundeMe__NotOwner();
+error FundMe__NotOwner();
 
 /**
  * @title A Funding Contract
@@ -32,7 +32,7 @@ contract FundMe {
     // Modifiers
     modifier onlyOwner() {
         // require(msg.sender == owner);
-        if (msg.sender != i_owner) revert FundeMe__NotOwner();
+        if (msg.sender != i_owner) revert FundMe__NotOwner();
         _;
     }
 
